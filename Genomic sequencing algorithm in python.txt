@@ -1,0 +1,28 @@
+# Define the sequence to be searched
+sequence = "ATCGATCGGATCGATCGATCG"
+
+# Define the pattern to search for
+pattern = "GATCG"
+
+# Set the starting index to 0
+index = 0
+
+# Initialize a list to store the matching indices
+matches = []
+
+# Loop over the sequence until the pattern is no longer found
+while index < len(sequence):
+    # Find the index of the pattern in the sequence
+    match_index = sequence.find(pattern, index)
+    # If the pattern is not found, break out of the loop
+    if match_index == -1:
+        break
+    # Otherwise, append the index to the list of matches
+    matches.append(match_index)
+    # Set the starting index for the next search
+    index = match_index + 1
+
+# Print the list of matching indices
+print(matches)
+
+This code defines a sequence to be searched and a pattern to search for. It then loops over the sequence, using the find() method to search for the pattern at each position. If the pattern is found, the index of the match is appended to a list of matches. Finally, the list of matches is printed to the console. Note that this is a very simple implementation of a genomic sequencing algorithm, and more complex algorithms exist that take into account things like sequencing errors, gaps, and mutatio
